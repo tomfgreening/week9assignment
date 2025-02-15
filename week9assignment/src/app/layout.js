@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignUp,
+  SignUpButton,
   SignInButton,
   SignedIn,
   SignedOut,
@@ -28,13 +28,15 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
-          <SignedOut>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <header><SignedOut>
             <SignInButton />
+            <SignUpButton />
           </SignedOut>
           <SignedIn>
             <UserButton />
           </SignedIn>
+          </header>
           {children}
         </body>
       </html>

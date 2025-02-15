@@ -377,6 +377,11 @@ img, video {
   display: none;
 }
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --background: #fff;
   --foreground: #171717;
