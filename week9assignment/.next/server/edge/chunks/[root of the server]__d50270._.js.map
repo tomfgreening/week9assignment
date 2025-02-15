@@ -2,6 +2,6 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.ts"],"sourcesContent":["import { clerkMiddleware } from \"@clerk/nextjs/server\";\n\nexport default clerkMiddleware();\nexport const config = {\n    matcher: [\n        '/((?!_next|[^?]*\\\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',\n    '/(api|trpc)(.*)',\n    ],\n};\n\n"],"names":[],"mappings":";;;;AAAA;;uCAEe,CAAA,GAAA,6KAAA,CAAA,kBAAe,AAAD;AACtB,MAAM,SAAS;IAClB,SAAS;QACL;QACJ;KACC;AACL"}},
-    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.ts"],"sourcesContent":["import { clerkMiddleware, createRouteMatcher } from \"@clerk/nextjs/server\";\n\nconst isProtectedRoute = createRouteMatcher([\"/user-profile(.*)\"]);\nexport default clerkMiddleware(async (auth, req) => {\n  if (isProtectedRoute(req)) await auth.protect();\n});\nexport const config = {\n  matcher: [\n    \"/((?!_next|[^?]*\\\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)\",\n    \"/(api|trpc)(.*)\",\n  ],\n};\n"],"names":[],"mappings":";;;;AAAA;AAAA;;AAEA,MAAM,mBAAmB,CAAA,GAAA,0KAAA,CAAA,qBAAkB,AAAD,EAAE;IAAC;CAAoB;uCAClD,CAAA,GAAA,6KAAA,CAAA,kBAAe,AAAD,EAAE,OAAO,MAAM;IAC1C,IAAI,iBAAiB,MAAM,MAAM,KAAK,OAAO;AAC/C;AACO,MAAM,SAAS;IACpB,SAAS;QACP;QACA;KACD;AACH"}},
+    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }
