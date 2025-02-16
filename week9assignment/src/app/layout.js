@@ -8,6 +8,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import RadixSocialsIcons from "./components/RadixSocialsIcons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
           <SignedIn>
             <UserButton />
           </SignedIn>
+          <RadixSocialsIcons />
           </header>
           {children}
         </body>
