@@ -1,4 +1,22 @@
+import { revalidatePath } from "next/cache";
+import { db } from "../utilities/dbconnection";
+import { redirect } from "next/dist/server/api-utils";
 export default function CreateUserProfilePage() {
+    "use server";
+    async function handleSubmit (formValues) {
+        const bio = formValues.get ("bio");
+        const date_of_birth = formValues.get ("date_of_birth");
+        const fav_number = formValues.get ("fav_number");
+        db.query(
+            'INSERT INTO users (bio, date_of_birth, fav_number) VALUES ($1, $2, $3)',
+            [bio, date_of_birth, fav_number]
+        );
+        revalidatePath("/user-profile");
+        redirect("/user-profile");
+    }
+
+
+
   return (
     <>
       <h1>Update your Pingr profile</h1>

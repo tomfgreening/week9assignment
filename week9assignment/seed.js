@@ -35,3 +35,8 @@
 // SELECT posts.post_title, posts.post_body, users.user_name
 // FROM posts
 // JOIN users ON posts.user_id = users.clerk_id;
+
+// ALTER TABLE users 
+// ADD bio VARCHAR (255),
+// ADD date_of_birth DATE,
+// ADD fav_number BIGINT
