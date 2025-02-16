@@ -16,5 +16,3 @@
 
 //   console.log('add Hobby completed with user details ', serverData)
 // }
-
-// Commented out as i'm not 100% sure on this.
