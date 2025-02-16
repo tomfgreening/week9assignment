@@ -12,9 +12,7 @@ export default async function PostsPage() {
                 <h4>{post.post_date}</h4>
                 <h3>{post.post_body}</h3>
                 </div>
-
-        )
-        }
+        ))}
         </>
     );
 }
