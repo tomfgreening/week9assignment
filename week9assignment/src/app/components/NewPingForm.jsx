@@ -11,3 +11,20 @@ export default function NewPingForm() {
         );
     }
 }
+
+return (
+    <>
+      <h1>Ping something!</h1>
+      <form action={handleSubmit}>
+        <label htmlFor=""></label>
+        <input type="" name="" id="" />
+        <label htmlFor=""></label>
+        <input type="" name="" id="" />
+        <label htmlFor=""></label>
+        <input type="" name="" id="" />
+        <button type="">Submit</button>
+      </form>
+    </>
+  );
+
+
