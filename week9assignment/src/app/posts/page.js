@@ -6,7 +6,15 @@ export default async function PostsPage() {
     return (
         <>
         <h1> Pingr Posts Page </h1>
-        {wrangledPosts.map}
+        {wrangledPosts.map((post) => (
+            <div key={post.id}>
+                <h2>{post.post_title}</h2>
+                <h4>{post.post_date}</h4>
+                <h3>{post.post_body}</h3>
+                </div>
+
+        )
+        }
         </>
     );
 }
