@@ -11,18 +11,17 @@ export default function NewPingForm() {
         );
     }
 }
-
 return (
     <>
       <h1>Ping something!</h1>
       <form action={handleSubmit}>
-        <label htmlFor=""></label>
-        <input type="" name="" id="" />
-        <label htmlFor=""></label>
-        <input type="" name="" id="" />
-        <label htmlFor=""></label>
-        <input type="" name="" id="" />
-        <button type="">Submit</button>
+        <label htmlFor="post_title">Ping title</label>
+        <input type="text" name="post_title" id="post_title" />
+        <label htmlFor="post_date">Date</label>
+        <input type="date" name="post_date" id="post_date" />
+        <label htmlFor="post_body"></label>
+        <input type="text" name="post_body" id="post_body" />
+        <button type="submit"> Do your Ping!</button>
       </form>
     </>
   );
