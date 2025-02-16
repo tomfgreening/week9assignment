@@ -16,3 +16,5 @@ export default async function PostsPage() {
         </>
     );
 }
+
+// Create a new component for making a new post and import it to the bottom of this page. Use your week 8 assigment form as a base.
