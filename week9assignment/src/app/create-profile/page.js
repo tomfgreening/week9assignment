@@ -15,8 +15,6 @@ export default function CreateUserProfilePage() {
         redirect("/user-profile");
     }
 
-
-
   return (
     <>
       <h1>Update your Pingr profile</h1>
